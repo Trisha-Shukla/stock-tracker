@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stock Tracker DashBoard</h1>
+    </header>
+    <main>
+        <section class="select-stocks">
+            <h2>Select Trending Stock</h2>
+            <div><select name="" id="trending-stock">
+                
+            </select> <button id="load-stock">Load</button></div>
+            <div><input type="text" id="search-input" placeholder="Search for a stock (e.g., AAPL)"> <button id="search-btn">search</button></div>
+        </section>
+        <section class="stock-info">
+            <h2> Stock Information</h2>
+            <div id="stock-detail">
+            <h3 id="stock-name"></h3>
+            <p id="price"></p>
+            <p id="change"></p>
+            <p id="volume"></p>
+        </div>
+        </section>
+        <section class="stock-graph">
+            <h2>Stock Price Graph</h2>
+            <canvas id="stock-chart"></canvas>
+        </section>
+        <section class="compare-stock">
+            <h2>Compare Stocks</h2>
+            <table id="compare-table">
+                <thead>
+                    <tr>
+                        <th >Stock</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Volume</th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
+<!-- 5GOOWEW7BBA7CAPO -->

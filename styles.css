@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header h1{
+    text-align: center;
+padding: 20px;
+background-color: #262121;
+color: white;
+}
+main{
+    padding: 30px;
+}
+.select-stocks{
+    text-align: center;
+}
+.select-stocks div{
+    margin-bottom: 20px;
+    display: flex;
+justify-content: center;
+
+}
+.select-stocks div select{
+    width: 300px;
+    padding: 12px;
+    font-size:18px;
+}
+.select-stocks div button{
+    padding: 10px;
+    margin: 0 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: larger;
+}
+.select-stocks div input{
+    padding: 12px;
+    margin: 0 10px;
+    font-size:18px;
+    
+}
+#stock-detail{
+    font-size:18px;
+}
+#stock-chart{
+    width: 100%;
+    height: 400px;
+}
+#compare-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 15px;
+}
+h2{
+    padding: 15px 0;
+}
