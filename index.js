@@ -1,4 +1,4 @@
-const apiKey='H2I4W0EK4J158M54';
+const apiKey='IP12LPHJVIM8I5R6';
 let stockChart;
 const stockData=[];
 
@@ -21,7 +21,7 @@ const fetchingStockData=async(symbol)=>{
     try {
         
         const response = await fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`);
-        const data = response.json();
+        const data = await response.json();
         console.log(data);
         
     
@@ -73,8 +73,8 @@ const displayStockData=(fetchedData,stockName)=>{
     const volume=latestData['5. volume'];
      
     document.getElementById('stock-name').innerText=stockName;
-    document.getElementById('price').innerText=`Price: ${price}`;
-    document.getElementById('change').innerText=`Change: ${change}`;
+    document.getElementById('price').innerText=`Price: $ ${price}`;
+    document.getElementById('change').innerText=`Change:$ ${change}`;
     document.getElementById('volume').innerText=`Volume: ${volume}`
     stockData.push({
         stock:stockName,
@@ -93,7 +93,7 @@ console.log(stockData);
 const tableBody=document.createElement('tbody');
 stockData.forEach((data)=>{
     tableBody.innerHTML=`<td>${data.stock}</td>
-    <td>${data.price}</td>
+    <td>$ ${data.price}</td>
     <td>${data.change}</td>
     <td>${data.volume}</td>
     `
